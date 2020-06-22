@@ -72,13 +72,13 @@ public class gift1 {
                 return "Error: Expected a number but got something else.\n";
             }
 
-            // Take out the amount of money gifted out of the account.
-            friendToBalance.put(giver, friendToBalance.get(giver) - amount);
-
-            // Divide it and give it to each recipient.
+            // Split the amount and give it to each recipient.
 
             if (numRecipients > 0) {
                 int giftAmount = amount / numRecipients;
+                
+                // Take out the amount of money gifted out of the account.
+                friendToBalance.put(giver, friendToBalance.get(giver) - giftAmount * numRecipients);
 
                 for (int i = 0; i < numRecipients; i++) {
                     String recipient = scanner.nextLine();
