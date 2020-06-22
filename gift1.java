@@ -3,6 +3,10 @@ import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Map;
 
+/**
+* Improvements that can be made:
+* 1. More rigorous error checking for bad lines.
+**/
 public class gift1 {
 
     /**
@@ -96,10 +100,10 @@ public class gift1 {
         return output.toString();
     }
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
         try {
-            // mfw Writer doesn't just create a new file if it doesn't exist in the same folder?????
+            // Create and write the output file.
             File file = new File("/Users/Amber/IdeaProjects/sampleproj/src/gift1.out");
             FileWriter writer = new FileWriter(file);
             writer.write(calculate("/Users/Amber/IdeaProjects/sampleproj/src/gift1.in"));
